@@ -1,0 +1,9 @@
+.has-danger input {
+    border: 1px solid #ce0000;
+    background-color: #ff9797;
+}
+
+.has-success input {
+    border: 1px solid #377a00;
+    background-color: #98d467;
+}
