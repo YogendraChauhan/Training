@@ -1,15 +1,15 @@
-import { Directive, Input, ElementRef, OnInit } from '@angular/core';
+import { Directive, Input, OnInit, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[bgColor]'
 })
 export class BgColorDirective implements OnInit {
   @Input() bgColor: string;
-  constructor(private elemRef: ElementRef) {
+  @HostBinding('style.background-color') backgroundColor: string;
 
-  }
+  constructor() { }
 
   ngOnInit() {
-    this.elemRef.nativeElement.style.backgroundColor = this.bgColor;
+    this.backgroundColor = this.bgColor;
   }
 }
