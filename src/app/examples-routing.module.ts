@@ -21,6 +21,8 @@ const routes: Routes = [
     redirectTo: '/form/reactive',
     pathMatch: 'full'
   },
+  { path: 'lazy-load', data: { name: 'Lazy Load Example' },
+    loadChildren: './examples/lazy-load/lazy-load.module#LazyLoadModule' },
   {
     path: '**',
     data: { name: 'Page Not Found!' },
